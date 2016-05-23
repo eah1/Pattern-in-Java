@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfaces.adapter;
+package interfaces.adapter.example1;
 
 /**
  *
  * @author eah1
  */
-public class Adapter extends BoxEuros implements Pesetas {
+public class Adapter implements Pesetas {
+    
+    public BoxEuros boxEuros = new BoxEuros();
     
     public Adapter() {
         super();
@@ -17,7 +19,7 @@ public class Adapter extends BoxEuros implements Pesetas {
    
     public double getSaldo() {
 
-         return this.getEuros();
+         return this.boxEuros.getEuros();
          
     }
     
@@ -25,7 +27,7 @@ public class Adapter extends BoxEuros implements Pesetas {
     public void drawPesetas(double pesetas) {
         
         double euros = pesetas / 166.386;
-        this.drawEuros( euros );
+        this.boxEuros.drawEuros( euros );
         
     }
 
@@ -33,7 +35,7 @@ public class Adapter extends BoxEuros implements Pesetas {
     public void payInPesetas(double pesetas) {
         
         double euros = pesetas / 166.386;  
-        this.payInEuros( euros );
+        this.boxEuros.payInEuros( euros );
         
     }
     

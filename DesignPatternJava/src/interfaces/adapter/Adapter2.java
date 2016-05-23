@@ -5,11 +5,13 @@
  */
 package interfaces.adapter;
 
+import interfaces.adapter.example2.Adapter;
+
 /**
  *
  * @author eah1
  */
-public class Main {
+public class Adapter2 {
     
     public static void main(String[] args) {
         
@@ -22,6 +24,7 @@ public class Main {
         conversor.drawPesetas( 3000 );
         
         System.out.println( "Total euros: " + conversor.getSaldo() );
+        
     }
     
 }
